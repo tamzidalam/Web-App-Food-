@@ -1,0 +1,187 @@
+-- phpMyAdmin SQL Dump
+-- version 4.8.5
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Aug 19, 2019 at 07:59 PM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.2
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `webtech`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cart`
+--
+
+CREATE TABLE `cart` (
+  `id` int(11) NOT NULL,
+  `product_name` varchar(100) NOT NULL,
+  `product_price` varchar(50) NOT NULL,
+  `product_image` varchar(255) NOT NULL,
+  `qty` int(10) NOT NULL,
+  `total_price` varchar(100) NOT NULL,
+  `product_code` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `phone` varchar(20) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `p_mode` varchar(50) NOT NULL,
+  `products` varchar(255) NOT NULL,
+  `amount_paid` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pizza`
+--
+
+CREATE TABLE `pizza` (
+  `id` int(11) NOT NULL,
+  `product_name` varchar(255) NOT NULL,
+  `product_image` varchar(255) NOT NULL,
+  `product_price` double(10,2) NOT NULL,
+  `product_code` varchar(10) DEFAULT NULL,
+  `restId` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pizza`
+--
+
+INSERT INTO `pizza` (`id`, `product_name`, `product_image`, `product_price`, `product_code`, `restId`) VALUES
+(1, 'Vegetable Pizza', 'pizza1.jpg', 100.00, 'p01', 'r102'),
+(2, 'Cheeeze Pizza', 'pizza2.jpg', 299.00, 'p02', 'r102'),
+(3, 'Meat Pizza', 'pizza3.jpg', 125.00, 'p03', 'r102'),
+(4, 'Beef Burger', 'burger1.jpg', 300.00, 'b001', 'r101'),
+(5, 'Chicken Burger', 'burger2.jpg', 200.00, 'b002', 'r101'),
+(6, 'Dark Burger', 'burger3.jpg', 350.00, 'b003', 'r101'),
+(7, 'Beef Burger', 'burger1.jpg', 350.00, 'b004', 'r104'),
+(8, 'Chicken Burger', 'burger2.jpg', 320.00, 'b005', 'r104'),
+(9, 'Dakr Burger', 'burger3.jpg', 320.00, 'b006', 'r104'),
+(10, 'Chicken juice', 'juice1.jpg', 120.00, 'j001', 'r103'),
+(11, 'Pinapple juice', 'juice2.jpg', 140.00, 'j002', 'r103'),
+(12, 'Orange juice', 'juice3.jpg', 150.00, 'j001', 'r103'),
+(13, 'Orange juice', 'juice1.jpg', 120.00, 'j004', 'r105'),
+(14, 'Mixed juice', 'juice3.jpg', 130.00, 'j005', 'r105'),
+(15, 'Mango juice', 'juice2.jpg', 150.00, 'j006', 'r105'),
+(16, 'Orange kacchi', 'k1.jpg', 150.00, 'k001', 'r106'),
+(17, 'Mutton kacchi', 'k2.jpg', 160.00, 'k002', 'r106'),
+(18, 'Beef kacchi', 'k3.jpg', 130.00, 'k003', 'r106'),
+(19, 'Beef kacchi', 'k1.jpg', 150.00, 'k004', 'r107'),
+(20, 'Orange kacchi', 'k3.jpg', 150.00, 'k005', 'r107'),
+(21, 'Mutton kacchi', 'k2.jpg', 150.00, 'k006', 'r107');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pizzahut`
+--
+
+CREATE TABLE `pizzahut` (
+  `id` varchar(10) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `price` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pizzahut`
+--
+
+INSERT INTO `pizzahut` (`id`, `name`, `price`) VALUES
+('10001', 'Pizza Italiano', 550),
+('10002', 'Fungi Hub Pizza', 390),
+('10003', 'Chicken Run Pizza', 580),
+('10004', 'Beef Steak Shuriken Pizza', 560),
+('1004', 'Hot & Dot Pizza', 580);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `restaurants`
+--
+
+CREATE TABLE `restaurants` (
+  `restId` varchar(10) NOT NULL,
+  `restName` varchar(30) NOT NULL,
+  `restIcon` varchar(30) NOT NULL,
+  `restAddress` varchar(38) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `restaurants`
+--
+
+INSERT INTO `restaurants` (`restId`, `restName`, `restIcon`, `restAddress`) VALUES
+('r101', 'Baba Rafi', 'babaRafi.jpg', 'Mehedi Mart , Bashundhara R/A'),
+('r102', 'Pizza Hut', 'pizzaHut.jpg', 'Bashundhara Gate.'),
+('r103', 'Juice And Juice ', 'juiceAndJuice.jpeg', 'Mehedi Mart , Bashundhara R/A'),
+('r104', 'Burger Mania', 'burgerMania.jpg', 'Bashundhara'),
+('r105', 'Cha Time ', 'chaTime.jpg', 'Rajbari Food Court'),
+('r106', 'Jafran', 'jafran.jpg', 'Road -2 , Block -A , Bashundhara R/A'),
+('r107', 'Kacchi Vai', 'kacchiVai.png', 'Bashundhara Gate'),
+('r108', 'Glazed', 'glazed.jpg', 'Jamuna Future Park'),
+('r109', 'Gelatesimo', 'glazed.jpg', 'Bashundhara Gate'),
+('r110', 'Pizza Lab', 'pizzahut.jpg', 'Bashundhara Gate');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `pizza`
+--
+ALTER TABLE `pizza`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `pizzahut`
+--
+ALTER TABLE `pizzahut`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `restaurants`
+--
+ALTER TABLE `restaurants`
+  ADD PRIMARY KEY (`restId`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `pizza`
+--
+ALTER TABLE `pizza`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

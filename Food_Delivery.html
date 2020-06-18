@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+	<title>Welcome to Food Village </title>
+	
+		<style>
+		
+			a 
+			{
+				text-decoration: none;
+				color : white ;
+			}
+			
+			#rcorners 
+			{
+				border-radius: 5px;
+			}
+			
+			.registerbtn
+			{
+				background-color: #CB0648;
+				color: white;
+				padding: 16px 20px;
+				margin: 10px 90px;
+				border: none;
+				cursor: pointer;
+				width: 40%;
+				opacity: 0.9;
+				align-content: center;
+			}
+			
+			.logInBtn
+			{
+				background-color: white;
+				color: #CB0648;
+				padding: 4px;
+				border: none;
+				cursor: pointer;
+				width: 15%;								
+			}
+			
+			.registerbtn:hover 
+			{
+				opacity: 1;
+			}
+			.homeLabel:hover
+			{
+				cursor: pointer;
+			}
+		</style>
+		
+	</head>	
+	
+	<body  padding="0px" ;spacing="0">
+		<table style="width:100% " cellspacing="0">
+		<tr style="background-color:#CB0648;" height="120" >
+			<td  style="font-size:300%" width ="65%">
+				<b>&#160;&#160;&#160; <font color="white"><a href="HomePage.html">Food Village&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></b>
+			</td>
+			<td style="font-size:120%;" >
+				<form action="HomePage.php">
+					<font color="white" ;face="Courier New";>
+						<br>
+						Email or Phone &#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;Password<br>
+						<input type="text" name="emailOrPhone">
+						<input type="text" name="password">
+						<button id="rcorners"  type="submit" class="logInBtn">Log In</button><br>
+						
+						<p style="font-size:80%;"><font color="white";>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Forgot account?</font></p>
+					</font>
+				</form>
+			</td>
+		</tr>
+		</table>
+		<table>
+		<tr style="background-color:white;" height="670" >
+			<td width="70%">
+				<p align="center"><font size="6"; face="Courier New";>It's the food you love,delivered . . <br> <br></font><br>
+				<img  id="image" src="index_image/login_page_photo.jpg" alt="Food Village " height="420" width="420" align="middle"></p>
+				<script>
+
+					var imageSources = ["index_image/mixed.jpg","index_image/Burger.png","index_image/sandwitch.jpg","index_image/login_page_photo.jpg"]
+
+					var index = 0;
+					setInterval (function(){
+						if (index === imageSources.length) {
+						index = 0;
+						}
+						document.getElementById("image").src = imageSources[index];
+						index++;
+					} , 4000);
+
+				</script>
+			</td>
+				
+			<td valign="top" width="35%">
+			<br>
+				<font color="#CB0648" ; size ="7" ; face="Questa";>
+				<b><i>New? Register here !</i></b> <br><br>
+				</font>
+				
+				<form>
+					<font color="#CB0648" ; size ="5" ; face="Courier New";>
+						<b>Full Name</b><br>
+						<input id="rcorners" style="height:40px;font-size:14pt;" type="text" name="nameText" size="40" placeholder="Write your full name.." ><br><br>
+						<b>Email</b> <br>
+						<input id="rcorners" style="height:40px;font-size:14pt;" type="email" name="emailText" size="40" placeholder="someone@example.com"><br><br>
+						<b>Mobile No</b> <br>
+						<input id="rcorners" style="height:40px;font-size:14pt;" type="text" name="mobileText" size="40" value="+880" ><br><br>
+						<b>Password</b> <br>
+						<input id="rcorners" style="height:40px;font-size:14pt;" type="password" name="passwordText" size="40" placeholder="Type your password here"><br><br>						
+					</font>					
+						<a href="HomePage.html"><button id="rcorners"  type="submit" class="registerbtn">Register</button></a>					
+				</form>
+			</td>
+		</tr>
+		</table>
+
+	</body>
+	<script>
+		home()
+		{
+			window.open("Food_Delivery.html");
+		}
+	</script>
+
+
+</html>
