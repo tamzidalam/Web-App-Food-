@@ -59,12 +59,12 @@
 				<b>&#160;&#160;&#160; <font color="white"><a href="HomePage.html">Food Village&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></b>
 			</td>
 			<td style="font-size:120%;" >
-				<form action="HomePage.php">
+				<form action="HomePage.php" method="post">
 					<font color="white" ;face="Courier New";>
 						<br>
-						Email or Phone &#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;Password<br>
+						Email  &#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;Password<br>
 						<input type="text" name="emailOrPhone">
-						<input type="text" name="password">
+						<input type="password" name="password">
 						<button id="rcorners"  type="submit" class="logInBtn">Log In</button><br>
 						
 						<p style="font-size:80%;"><font color="white";>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Forgot account?</font></p>
@@ -100,7 +100,7 @@
 				<b><i>New? Register here !</i></b> <br><br>
 				</font>
 				
-				<form>
+				<form action="registration.php" method='post'>
 					<font color="#CB0648" ; size ="5" ; face="Courier New";>
 						<b>Full Name</b><br>
 						<input id="rcorners" style="height:40px;font-size:14pt;" type="text" name="nameText" size="40" placeholder="Write your full name.." ><br><br>
@@ -108,10 +108,14 @@
 						<input id="rcorners" style="height:40px;font-size:14pt;" type="email" name="emailText" size="40" placeholder="someone@example.com"><br><br>
 						<b>Mobile No</b> <br>
 						<input id="rcorners" style="height:40px;font-size:14pt;" type="text" name="mobileText" size="40" value="+880" ><br><br>
+						
+						<b>Address</Address></b> <br>
+						<input id="rcorners" style="height:40px;font-size:14pt;" type="text" name="address" size="40" value="Write your address here" ><br><br>
+						
 						<b>Password</b> <br>
 						<input id="rcorners" style="height:40px;font-size:14pt;" type="password" name="passwordText" size="40" placeholder="Type your password here"><br><br>						
 					</font>					
-						<a href="HomePage.html"><button id="rcorners"  type="submit" class="registerbtn">Register</button></a>					
+						<button id="rcorners"  type="submit" class="registerbtn">Register</button>				
 				</form>
 			</td>
 		</tr>

@@ -2,7 +2,7 @@
 
 session_start();
 #redirect if user or guest
-$filename = "../session_info.txt";
+$filename = "session_info.txt";
 $session_info = fopen($filename, "r");
 $username = fgets($session_info);
 $userType = trim(fgets($session_info));

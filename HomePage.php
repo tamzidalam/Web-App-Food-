@@ -22,7 +22,8 @@
 <body>
         <nav class="navbar navbar-expand-md navbar-dark" style="background: #CB0648">
                 <!-- Brand -->
-                <a class="navbar-brand" href="#">food village</a>
+                <a class="navbar-brand" href="#">Food Village</a>
+                <a href="#" class="previous round">&#8249;</a>
               
                 <!-- Toggler/collapsibe Button -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -33,7 +34,7 @@
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                   <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                      <a class="nav-link" href="profile.php"><i class="fas fa-user"></i>&nbsp; Profile &nbsp;</a>
+                      
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="Food_Delivery.html"><i class="fas fa-sign-out-alt"></i>&nbsp; Logout &nbsp;</a>
